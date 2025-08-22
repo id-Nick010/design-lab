@@ -1,0 +1,100 @@
+/* default designs */
+body {
+    width: 85vw;
+    margin:0 auto;
+
+    background-color: #e8fdea;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+.main-body {
+    background-color: white;
+    padding: 2%;
+    margin: 2%;
+
+    border-radius: 20px;
+}
+
+/* header layout */
+.home-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 2%;
+    
+    background-color: #1b341f;
+    color: white;
+    border-radius: 20px;
+
+}
+
+.home-header h1 {
+    margin: 1rem;
+    font-size: 3rem;
+}
+.home-header h2 {
+    margin: .5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.home-header p {
+    margin: .5rem;
+}
+
+
+/* main nav layout */
+.exp-main-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    min-height: 50vh;
+}
+/* page nav container */
+.exp-nav-container a{
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: row;
+    padding: 2%;
+    gap:10px;
+
+    color: #18321d;
+}
+
+.exp-nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    font-size: 2.5rem;
+    aspect-ratio: 1/1;
+
+    background-color: #ceecd2;
+    border-radius: 20%;
+}
+
+.exp-nav-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.exp-nav-desc p {
+    color: #55805e;
+}
+
+a {
+    border-radius: 20px;
+    transition: transform .2s ease-in-out, 
+        border .1s ease-in-out; 
+}
+
+a:hover {
+    transform: scale(1.05);
+    border: 2px dashed #5f9467;
+}
