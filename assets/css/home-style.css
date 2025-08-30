@@ -53,10 +53,10 @@ h1, h2, h3, h4, h5, h6, p {
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
-    min-height: 50vh;
 }
 /* page nav container */
 .exp-nav-container a{
+    max-height: 100px;
     box-sizing: border-box;
     display:flex;
     flex-direction: row;
