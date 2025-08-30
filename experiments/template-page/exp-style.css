@@ -1,6 +1,6 @@
 /* temporary sizing & spacing */
-body {
-  /* width: 50vw; */
+html {
+  font-size: 16px;
 }
 .card-container {
   margin: 5vw;
@@ -14,7 +14,7 @@ body {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 2fr auto;
+  grid-template-rows: auto 1fr auto;
 
   font-family: "Poppins", sans-serif;
   color: #767676;
@@ -38,7 +38,7 @@ body {
 
 /* Card Text - title & desc */
 .card-title {
-  font-size: clamp(1.8rem, 6vw, 7rem);
+  font-size: clamp(1.8rem, 2.5vw + 1rem, 3rem);
   margin-block: 0 0.5rem;
   margin-left: 1rem;
 
@@ -50,7 +50,7 @@ body {
 
 .card-desc {
   margin: 0 1rem;
-  font-size: clamp(0.5rem, 3vw, 3rem);
+  font-size: clamp(0.3rem, 2vw + .5rem, 2rem);
 }
 
 /* Card Tags */
@@ -58,14 +58,14 @@ body {
   grid-column: 1/ -1;
   display: flex;
   justify-content: start;
-  gap: 1.5rem;
+  gap: 1rem;
   padding: 0;
 
   list-style-type: none;
 }
 
 .item-tag {
-  font-size: clamp(0.7rem, 2.5vw, 3rem);
+  font-size: clamp(0.1rem, 1.8vw + .3rem, 1.5rem);
   padding: 0.2rem 1rem;
 
   background-color: #f4f4f4;
@@ -73,6 +73,11 @@ body {
 }
 
 @media (min-width: 1028px) {
+  /* test size temporary */
+  .card-container {
+    max-height: 1200px;
+    max-width: 50%;
+  }
   html {
     font-size: 18px;
   }
@@ -81,9 +86,21 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    max-height: 800px;
     position: relative;
-    /* border: 1px solid blue; */
+    aspect-ratio: 5/4;
+  }
+
+  .img-wrapper {
+    border-radius: 32px;
+    transition: border-radius .5s ease;
+  }
+  .card-container:hover .img-wrapper {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .card-img{
+    transform: scale(1.3);
   }
 
   .card-title {
@@ -99,15 +116,15 @@ body {
   .card-desc,
   .item-tags-wrapper {
     margin: 0;
-    margin-bottom: 1rem;
     max-height: 0;
     opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
+    transition: max-height .5s ease, opacity .5s ease;
   }
-
+  
   .card-container:hover .card-desc,
   .card-container:hover .item-tags-wrapper {
     max-height: 300px;
+    margin-bottom: 1rem;
     opacity: 1;
   }
 }
