@@ -5,3 +5,43 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+/* ------ */
+.tab-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.tab-navigator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tab-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.tab-btn.active {
+    background: #32a53b;
+    color: white;
+}
+
+
+/* main function of the tabbing  */
+.tab-pane {
+    display: none;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.tab-pane.active {
+    display: block;
+}
